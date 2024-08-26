@@ -5,7 +5,7 @@ import {
 	useStylesScoped$,
 } from "@builder.io/qwik";
 import { type DocumentHead, useLocation } from "@builder.io/qwik-city";
-import styles from "./flower.css?inline";
+import styles from "./flower.scss?inline";
 
 export default component$(() => {
 	useStylesScoped$(styles);

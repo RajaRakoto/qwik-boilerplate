@@ -7,7 +7,7 @@ import {
 	z,
 	Form,
 } from "@builder.io/qwik-city";
-import styles from "./todolist.module.css";
+import styles from "./todolist.module.scss";
 
 interface ListItem {
 	text: string;

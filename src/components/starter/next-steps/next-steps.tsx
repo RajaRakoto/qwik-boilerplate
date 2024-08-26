@@ -1,5 +1,5 @@
 import { component$, $, useOnWindow, useSignal } from "@builder.io/qwik";
-import styles from "./next-steps.module.css";
+import styles from "./next-steps.module.scss";
 
 export const GETTING_STARTED_STEPS = [
 	{
