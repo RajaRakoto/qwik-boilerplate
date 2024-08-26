@@ -14,7 +14,7 @@ dist
 # dependencies
 .pnp
 .pnp.js
-.yarn/install-state.gz
+.yarn
 node_modules
 bower_components
 jspm_packages
