@@ -43,7 +43,7 @@ export default component$(() => {
         </h1>
       </div>
 
-      <div role="presentation" class="ellipsis"></div>
+      <div role="presentation" class="ellipsis"/>
 
       <div class="container container-center">
         {list.value.length === 0 ? (
@@ -51,7 +51,7 @@ export default component$(() => {
         ) : (
           <ul class={styles.list}>
             {list.value.map((item, index) => (
-              <li key={`items-${index}`}>{item.text}</li>
+              <li key={`items-${index.toString()}`}>{item.text}</li>
             ))}
           </ul>
         )}

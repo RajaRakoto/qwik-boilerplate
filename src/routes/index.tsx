@@ -12,8 +12,8 @@ export default component$(() => {
       <Hero />
       <Starter />
 
-      <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
+      <div role="presentation" class="ellipsis"/>
+      <div role="presentation" class="ellipsis ellipsis-purple"/>
 
       <div class="container container-center container-spacing-xl">
         <h3>
@@ -70,26 +70,26 @@ export default component$(() => {
             <ul>
               <li>
                 <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.dev/chat" target="_blank">
+                <a href="https://qwik.dev/chat" target="_blank" rel="noreferrer">
                   Chat on discord!
                 </a>
               </li>
               <li>
                 <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
+                <a href="https://twitter.com/QwikDev" target="_blank" rel="noreferrer">
                   @QwikDev
                 </a>
                 <span> on Twitter</span>
               </li>
               <li>
                 <span>Open issues and contribute on </span>
-                <a href="https://github.com/QwikDev/qwik" target="_blank">
+                <a href="https://github.com/QwikDev/qwik" target="_blank" rel="noreferrer">
                   GitHub
                 </a>
               </li>
               <li>
                 <span>Watch </span>
-                <a href="https://qwik.dev/media/" target="_blank">
+                <a href="https://qwik.dev/media/" target="_blank" rel="noreferrer">
                   Presentations, Podcasts, Videos, etc.
                 </a>
               </li>

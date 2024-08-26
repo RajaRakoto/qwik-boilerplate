@@ -1,6 +1,6 @@
 import {
   component$,
-  useVisibleTask$,
+  useTask$,
   useStore,
   useStylesScoped$,
 } from "@builder.io/qwik";
@@ -16,8 +16,8 @@ export default component$(() => {
     number: 20,
   });
 
-  useVisibleTask$(({ cleanup }) => {
-    const timeout = setTimeout(() => (state.count = 1), 500);
+  useTask$(({ cleanup }) => {
+    const timeout = setTimeout(() => {state.count = 1}, 500);
     cleanup(() => clearTimeout(timeout));
 
     const internal = setInterval(() => state.count++, 7000);
@@ -26,7 +26,7 @@ export default component$(() => {
 
   return (
     <div class="container container-center">
-      <div role="presentation" class="ellipsis"></div>
+      <div role="presentation" class="ellipsis"/>
       <h1>
         <span class="highlight">Generate</span> Flowers
       </h1>
@@ -36,7 +36,7 @@ export default component$(() => {
         type="range"
         value={state.number}
         max={50}
-        onInput$={(ev, el) => {
+        onInput$={(_ev, el) => {
           state.number = el.valueAsNumber;
         }}
       />
@@ -51,7 +51,7 @@ export default component$(() => {
       >
         {Array.from({ length: state.number }, (_, i) => (
           <div
-            key={i}
+            key={i.toString()}
             class={{
               square: true,
               odd: i % 2 === 0,
