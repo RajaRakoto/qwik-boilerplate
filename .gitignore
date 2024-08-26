@@ -1,20 +1,4 @@
-# Build
-/dist
-/lib
-/lib-types
-/server
-
-# Development
-node_modules
-*.local
-
-# Cache
-.cache
-.mf
-.rollup.cache
-tsconfig.tsbuildinfo
-
-# Logs
+# logs
 logs
 *.log
 npm-debug.log*
@@ -23,11 +7,49 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Editor
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
+# production
+build
+dist
+lib
+lib-types
+server
 
+# dependencies
+.pnp
+.pnp.js
+.yarn/install-state.gz
+node_modules
+bower_components
+jspm_packages
+*.local
+
+# yarn
+.yarn-integrity
+.yarn/*
+!.yarn/releases
+
+# reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# coverage
+coverage
+lib-cov
+*.lcov
+.nyc_output
+
+# grunt
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# editor
 .idea
 .DS_Store
 *.suo
@@ -35,11 +57,46 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
 
-# Yarn
-.yarn/*
-!.yarn/releases
+# typescript
+typings
+*.tsbuildinfo
 
-# Own
+# cache & history
+.cache
+.npm
+.eslintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.node_repl_history
+.mf
+.rollup.cache
+tsconfig.tsbuildinfo
+
+# dotenv environment variables file
+.env
+.env.local
+
+# output
+*.tgz
+
+# serverless
+.serverless
+
+# fusebox
+.fusebox
+
+# dynamodb
+.dynamodb
+
+# ternjs
+.tern-port
+
+# own
 tmp
 backups
