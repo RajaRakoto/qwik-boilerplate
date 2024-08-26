@@ -3,6 +3,7 @@
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
 module.exports = (grunt) => {
+	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	require("load-grunt-tasks")(grunt);
 
 	// all files destination (example)
@@ -17,12 +18,12 @@ module.exports = (grunt) => {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("./package.json"),
 		/**
-		 * Compress files and folders (incremental backup)
+		 * Compress files and folders (incremental backups)
 		 */
 		compress: {
 			main: {
 				options: {
-					archive: `${backupsDestination}public.tar.gz`,
+					archive: `${backupsDestination}main.tar.gz`,
 				},
 				files: [{ src: ["./*", "./.*"] }],
 				filter: "isFile",
@@ -63,7 +64,16 @@ module.exports = (grunt) => {
 				src: includeAllFiles,
 				dest: "public",
 			},
-			scripts: {
+			server: {
+				options: {
+					archive: `${backupsDestination}server.tar.gz`,
+				},
+				expand: true,
+				cwd: "./server/",
+				src: includeAllFiles,
+				dest: "server",
+			},
+      scripts: {
 				options: {
 					archive: `${backupsDestination}scripts.tar.gz`,
 				},
@@ -103,24 +113,25 @@ module.exports = (grunt) => {
 	});
 
 	// all grunt register tasks
-	grunt.registerTask("backup", [
+	grunt.registerTask("backups", [
 		"compress:main",
 		"compress:github",
 		"compress:vscode",
 		"compress:e2e",
 		"compress:public",
 		"compress:scripts",
+		"compress:server",
 		"compress:src",
 		"compress:tests",
 		"compress:tmp",
 	]);
 
 	// all tasks lists
-	const myTasksNames = ["backup"];
+	const myTasksNames = ["backups"];
 
 	// tasks status (description)
 	const myTasksStatus = [
-		"compress: main | github | vscode | e2e | public | scripts | src | tests | tmp",
+		"compress: main | github | vscode | e2e | public | scripts | server | src | tests | tmp",
 	];
 
 	// default tasks
