@@ -10,6 +10,9 @@ lerna-debug.log*
 # production
 build
 dist
+lib
+lib-types
+server
 
 # dependencies
 .pnp
@@ -19,8 +22,10 @@ node_modules
 bower_components
 jspm_packages
 
-# yarn integrity file
+# yarn
 .yarn-integrity
+.yarn/*
+!.yarn/releases
 
 # reports
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

@@ -57,9 +57,6 @@ lib-cov
 *.njsproj
 *.sln
 *.sw?
-.vscode/*
-!.vscode/launch.json
-!.vscode/*.code-snippets
 
 # typescript
 typings
@@ -98,5 +95,6 @@ tsconfig.tsbuildinfo
 .tern-port
 
 # own
+playwright-report
 tmp
 backups

@@ -1,37 +1,41 @@
-**/*.log
-**/.DS_Store
-*.
-.vscode/settings.json
-.history
-.yarn
+# production
+build
+dist
+dist-dev
 bazel-*
 bazel-bin
 bazel-out
 bazel-qwik
 bazel-testlogs
-dist
-dist-dev
 lib
 lib-types
 etc
 external
-node_modules
-temp
 tsc-out
-tsdoc-metadata.json
 target
 output
-rollup.config.js
-build
-.cache
-.vscode
-.rollup.cache
-tsconfig.tsbuildinfo
-vite.config.ts
-*.spec.tsx
-*.spec.ts
-.netlify
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
 server
+tsconfig.tsbuildinfo
+tsdoc-metadata.json
+
+# dependencies
+.pnp
+.pnp.js
+.yarn
+node_modules
+bower_components
+jspm_packages
+
+# config
+vite.config.ts
+
+# cache
+.rollup.cache
+.cache
+
+# netlify
+.netlify
+
+# own
+backups
+tmp
