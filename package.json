@@ -58,7 +58,7 @@
     "prettier:fix": "prettier --write .",
     "prettier:check": "prettier --check .",
     "eslint": "eslint --config .eslintrc.cjs --report-unused-disable-directives --max-warnings 0 .",
-    "backup": "grunt backup",
+    "backups": "grunt backups",
     "pkg-check": "depcheck",
     "pkg-upgrade": "ncu --interactive --format group --packageManager bun",
     "versioning": "ungit",
