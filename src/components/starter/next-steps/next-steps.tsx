@@ -59,7 +59,7 @@ export default component$(() => {
 				/>
 				<span
 					class={styles.hint}
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
 					dangerouslySetInnerHTML={
 						GETTING_STARTED_STEPS[gettingStartedStep.value]?.hint ?? ""
 					}

@@ -30,18 +30,18 @@ export default component$(() => {
 						};
 
 						function loadConfetti() {
-              // biome-ignore lint/suspicious/noExplicitAny: This is a dynamic import
+							// biome-ignore lint/suspicious/noExplicitAny: This is a dynamic import
 							return new Promise<(opts: any) => void>((resolve, reject) => {
-                // biome-ignore lint:
+								// biome-ignore lint:
 								if ((globalThis as any).confetti) {
-                  // biome-ignore lint:
+									// biome-ignore lint:
 									return resolve((globalThis as any).confetti as any);
 								}
 								const script = document.createElement("script");
 								script.src =
 									"https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
 								script.onload = () =>
-                  // biome-ignore lint:
+									// biome-ignore lint:
 									resolve((globalThis as any).confetti as any);
 								script.onerror = reject;
 								document.head.appendChild(script);

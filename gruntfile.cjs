@@ -73,7 +73,7 @@ module.exports = (grunt) => {
 				src: includeAllFiles,
 				dest: "server",
 			},
-      scripts: {
+			scripts: {
 				options: {
 					archive: `${backupsDestination}scripts.tar.gz`,
 				},

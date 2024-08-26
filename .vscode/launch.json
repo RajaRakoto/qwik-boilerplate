@@ -1,21 +1,21 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch Chrome",
-      "request": "launch",
-      "type": "chrome",
-      "url": "http://localhost:5173",
-      "webRoot": "${workspaceFolder}"
-    },
-    {
-      "type": "node",
-      "name": "dev.debug",
-      "request": "launch",
-      "skipFiles": ["<node_internals>/**"],
-      "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/vite/bin/vite.js",
-      "args": ["--mode", "ssr", "--force"]
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch Chrome",
+			"request": "launch",
+			"type": "chrome",
+			"url": "http://localhost:5173",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"type": "node",
+			"name": "dev.debug",
+			"request": "launch",
+			"skipFiles": ["<node_internals>/**"],
+			"cwd": "${workspaceFolder}",
+			"program": "${workspaceFolder}/node_modules/vite/bin/vite.js",
+			"args": ["--mode", "ssr", "--force"]
+		}
+	]
 }

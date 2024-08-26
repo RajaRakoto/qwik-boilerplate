@@ -1,19 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
+	"compilerOptions": {
+		"target": "ESNext",
 		"module": "ESNext",
-    "lib": ["ESNext", "DOM", "WebWorker", "DOM.Iterable"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "@builder.io/qwik",
-    "verbatimModuleSyntax": false,
-    "moduleResolution": "Bundler",
-    "moduleDetection": "force",
-    "rootDir": ".",
-    "outDir": "./dist",
-    "useDefineForClassFields": true,
+		"lib": ["ESNext", "DOM", "WebWorker", "DOM.Iterable"],
+		"jsx": "react-jsx",
+		"jsxImportSource": "@builder.io/qwik",
+		"verbatimModuleSyntax": false,
+		"moduleResolution": "Bundler",
+		"moduleDetection": "force",
+		"rootDir": ".",
+		"outDir": "./dist",
+		"useDefineForClassFields": true,
 		"allowImportingTsExtensions": true,
 		"allowSyntheticDefaultImports": true,
-    "importHelpers": true,
+		"importHelpers": true,
 		"alwaysStrict": true,
 		"sourceMap": true,
 		"noEmit": true,
@@ -26,7 +26,7 @@
 		"noUnusedParameters": true,
 		"noImplicitAny": true,
 		"noImplicitThis": false,
-    "strictNullChecks": true,
+		"strictNullChecks": true,
 		"esModuleInterop": true,
 		"allowJs": true,
 		"strict": true,
@@ -34,13 +34,21 @@
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-    "incremental": true,
+		"incremental": true,
 		"paths": {
 			"@/*": ["./src/*"],
 			"~/*": ["./public/*"]
 		}
-  },
-  "files": ["./.eslintrc.cjs"],
-  "include": ["src", "e2e", "tests", "scripts", "public/icons", "./*.d.ts", "./*.config.ts"],
-  "exclude": ["./node_modules"],
+	},
+	"files": ["./.eslintrc.cjs"],
+	"include": [
+		"src",
+		"e2e",
+		"tests",
+		"scripts",
+		"public/icons",
+		"./*.d.ts",
+		"./*.config.ts"
+	],
+	"exclude": ["./node_modules"]
 }
