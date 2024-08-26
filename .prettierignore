@@ -33,9 +33,13 @@ vite.config.ts
 .rollup.cache
 .cache
 
+# editor
+.vscode
+
 # netlify
 .netlify
 
 # own
 backups
 tmp
+package.json
