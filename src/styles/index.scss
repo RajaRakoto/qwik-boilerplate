@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+@import "sass/_typography.scss";
+
+:root {
+	--qwik-dark-blue: #006ce9;
+	--qwik-light-blue: #18b6f6;
+	--qwik-light-purple: #ac7ff4;
+	--qwik-dark-purple: #713fc2;
+	--qwik-dirty-black: #1d2033;
+	--qwik-dark-background: #151934;
+	--qwik-dark-text: #ffffff;
+	font-family: "Quicksand", Inter, system-ui, Avenir, Helvetica, Arial,
+		sans-serif;
+	color: #333;
+}
+
+html {
+	line-height: 1;
+	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	line-height: inherit;
+}
