@@ -7,13 +7,16 @@ import {
 	z,
 	Form,
 } from "@builder.io/qwik-city";
+
+/* types */
+import type { I_ListItem } from "@/@types";
+
+/* styles */
 import styles from "./todolist.module.scss";
 
-interface ListItem {
-	text: string;
-}
+// =======================================
 
-export const list: ListItem[] = [];
+export const list: I_ListItem[] = [];
 
 export const useListLoader = routeLoader$(() => {
 	return list;

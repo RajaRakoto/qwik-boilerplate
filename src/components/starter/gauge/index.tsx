@@ -1,5 +1,9 @@
 import { component$ } from "@builder.io/qwik";
+
+/* styles */
 import styles from "./gauge.module.scss";
+
+// =======================================
 
 export default component$(({ value = 50 }: { value?: number }) => {
 	const safeValue = value < 0 || value > 100 ? 50 : value;

@@ -1,5 +1,9 @@
 import { Slot, component$ } from "@builder.io/qwik";
+
+/* styles */
 import styles from "./infobox.module.scss";
+
+// =======================================
 
 export default component$(() => {
 	return (

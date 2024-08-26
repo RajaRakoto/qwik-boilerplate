@@ -1,6 +1,12 @@
 import { component$ } from "@builder.io/qwik";
+
+/* icons */
 import { QwikLogo } from "~/icons/qwik";
+
+/* styles */
 import styles from "./header.module.scss";
+
+// =======================================
 
 export default component$(() => {
 	return (
