@@ -18,10 +18,10 @@ export default component$(() => {
 				<br />
 				to have <span class="highlight">you</span> here
 			</h1>
-			<p>
-				Have fun building your App with Qwik.{" "}
-				<LuRocket style={{ color: "#ff825c", fontSize: "28px" }} />
-			</p>
+			<p>Have fun building your App with Qwik.</p>
+			<div>
+				<LuRocket style={{ color: "#ff825c", fontSize: "48px" }} />
+			</div>
 			<div class={styles["button-group"]}>
 				<button
 					type="button"
