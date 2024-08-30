@@ -35,7 +35,6 @@
 		"starter"
 	],
 	"scripts": {
-		"qwik": "qwik",
 		"start": "vite --open --mode ssr",
 		"preview": "qwik build preview && vite preview --open",
 		"clean": "rimraf build dist coverage playwright-report",
@@ -63,7 +62,8 @@
 		"npm-version:minor": "npm version minor",
 		"npm-version:patch": "npm version patch",
 		"nvm": "nvm use",
-		"script:sass-charset": "cd scripts && bun sass-charset.js"
+		"script:sass-charset": "cd scripts && bun sass-charset.js",
+		"qwik": "qwik"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
@@ -78,7 +78,7 @@
 		"@types/node": "20.14.11",
 		"@typescript-eslint/eslint-plugin": "7.16.1",
 		"@typescript-eslint/parser": "7.16.1",
-		"autoprefixer": "^10.4.20",
+		"autoprefixer": "^10.4.14",
 		"depcheck": "^1.4.7",
 		"eslint": "8.57.0",
 		"eslint-plugin-qwik": "^1.8.0",
@@ -88,9 +88,12 @@
 		"load-grunt-tasks": "^5.1.0",
 		"npm-check-updates": "^17.1.0",
 		"playwright": "^1.46.1",
+		"postcss": "^8.4.31",
 		"prettier": "3.3.3",
+		"prettier-plugin-tailwindcss": "^0.5.4",
 		"rimraf": "^6.0.1",
 		"sass": "^1.77.8",
+		"tailwindcss": "3.3.3",
 		"ts-jest": "^29.2.5",
 		"typescript": "5.4.5",
 		"undici": "*",
