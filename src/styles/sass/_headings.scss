@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+h1,
+h2,
+h3 {
+  color: white;
+  margin: 0;
+
+  .highlight {
+    color: var(--qwik-light-blue);
+  }
+}
+
+h1 {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2.4rem;
+
+  .highlight {
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3.4rem;
+	}
+
+	h3 {
+		font-size: 3rem;
+	}
+}
