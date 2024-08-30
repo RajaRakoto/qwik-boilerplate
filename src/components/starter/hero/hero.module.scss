@@ -31,6 +31,31 @@
 		flex-direction: row;
 		gap: 24px;
 	}
+
+  .hidden {
+    display: none;
+  }
+
+	.logo {
+		height: 6em;
+		padding: 1.5em;
+		will-change: filter;
+		transition: filter 300ms;
+		width: 200px !important;
+		height: 200px !important;
+
+		&.vite:hover {
+			filter: drop-shadow(0 0 2em #eb79fff9);
+		}
+
+		&.qwik:hover {
+			filter: drop-shadow(0 0 2em #37c3fff2);
+		}
+
+		&.bun:hover {
+			filter: drop-shadow(0 0 2em #ffe838e1);
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {

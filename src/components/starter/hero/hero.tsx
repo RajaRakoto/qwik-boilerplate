@@ -3,6 +3,9 @@ import { LuRocket } from "@qwikest/icons/lucide";
 
 /* images */
 import ImgThunder from "~/images/thunder.png?jsx";
+import ViteLogo from "~/images/vite.svg";
+import QwikLogo from "~/images/qwik.svg";
+import BunLogo from "~/images/bun.svg";
 
 /* styles */
 import styles from "./hero.module.scss";
@@ -13,6 +16,35 @@ export default component$(() => {
 	return (
 		<div class={["container", styles.hero]}>
 			<ImgThunder class={styles["hero-image"]} alt="Image thunder" />
+			<div>
+				<a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
+					<img
+						src={ViteLogo}
+						class={[styles.logo, styles.vite]}
+						alt="Vite.js logo"
+						width="200"
+						height="200"
+					/>
+				</a>
+				<a href="https://qwik.dev" target="_blank" rel="noopener noreferrer">
+					<img
+						src={QwikLogo}
+						class={[styles.logo, styles.qwik]}
+						alt="Qwik logo"
+						width="200"
+						height="200"
+					/>
+				</a>
+				<a href="https://bun.sh/" target="_blank" rel="noopener noreferrer">
+					<img
+						src={BunLogo}
+						class={[styles.logo, styles.bun]}
+						alt="Bun.js logo"
+						width="200"
+						height="200"
+					/>
+				</a>
+			</div>
 			<h1>
 				So <span class="highlight">fantastic</span>
 				<br />
