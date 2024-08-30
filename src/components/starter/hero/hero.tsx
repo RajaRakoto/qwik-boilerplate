@@ -20,7 +20,10 @@ export default component$(() => {
 			</h1>
 			<p>Have fun building your App with Qwik.</p>
 			<div>
-				<LuRocket class="animated animatedFadeInUp fadeInUp" style={{ color: "#eee", fontSize: "48px" }} />
+				<LuRocket
+					class="animated animatedFadeInUp fadeInUp"
+					style={{ color: "#eee", fontSize: "48px" }}
+				/>
 			</div>
 			<div class={styles["button-group"]}>
 				<button
