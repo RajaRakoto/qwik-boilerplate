@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { LuRocket } from "@qwikest/icons/lucide";
 
 /* images */
 import ImgThunder from "~/images/thunder.png?jsx";
@@ -17,7 +18,10 @@ export default component$(() => {
 				<br />
 				to have <span class="highlight">you</span> here
 			</h1>
-			<p>Have fun building your App with Qwik.</p>
+			<p>
+				Have fun building your App with Qwik.{" "}
+				<LuRocket style={{ color: "#ff825c", fontSize: "28px" }} />
+			</p>
 			<div class={styles["button-group"]}>
 				<button
 					type="button"
