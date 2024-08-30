@@ -1,25 +1,25 @@
 @charset "UTF-8";
 
 .container {
-  margin: 0 auto;
-  padding: 30px 40px;
+	margin: 0 auto;
+	padding: 30px 40px;
 
-  &.container-purple {
-    background: var(--qwik-light-purple);
-  }
+	&.container-purple {
+		background: var(--qwik-light-purple);
+	}
 
-  &.container-dark {
-    background: var(--qwik-dark-background);
-    color: var(--qwik-dark-text);
-  }
+	&.container-dark {
+		background: var(--qwik-dark-background);
+		color: var(--qwik-dark-text);
+	}
 
-  &.container-center {
-    text-align: center;
-  }
+	&.container-center {
+		text-align: center;
+	}
 
-  &.container-spacing-xl {
-    padding: 50px 40px;
-  }
+	&.container-spacing-xl {
+		padding: 50px 40px;
+	}
 }
 
 @media screen and (min-width: 768px) {

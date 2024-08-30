@@ -1,37 +1,37 @@
 @charset "UTF-8";
 
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: white;
-  min-height: 250px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	color: white;
+	min-height: 250px;
 
-  li {
-    list-style: none;
-  }
+	li {
+		list-style: none;
+	}
 }
 
 .empty {
-  color: white;
-  display: block;
-  min-height: 250px;
+	color: white;
+	display: block;
+	min-height: 250px;
 }
 
 .input {
-  background: white;
-  color: var(--qwik-light-blue);
-  border: none;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-right: 10px;
-  font-size: 0.8rem;
+	background: white;
+	color: var(--qwik-light-blue);
+	border: none;
+	border-radius: 8px;
+	padding: 15px 20px;
+	margin-right: 10px;
+	font-size: 0.8rem;
 }
 
 .hint {
-  font-size: 0.8rem;
-  color: white;
-  margin-top: 30px;
+	font-size: 0.8rem;
+	color: white;
+	margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {

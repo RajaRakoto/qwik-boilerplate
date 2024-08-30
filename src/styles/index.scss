@@ -35,37 +35,37 @@ body {
 	padding: 0;
 	margin: 0;
 	line-height: inherit;
-  background: var(--qwik-dark-background);
+	background: var(--qwik-dark-background);
 	color: var(--qwik-dark-text);
 	overflow-x: hidden;
 }
 
 /* DESIGN --------------------------------------- */
 .ellipsis {
-  position: absolute;
-  top: 100px;
-  left: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(
-    57.58% 57.58% at 48.79% 42.42%,
-    rgba(24, 180, 244, 0.5) 0%,
-    rgba(46, 55, 114, 0) 63.22%
-  );
-  transform: rotate(5deg);
-  opacity: 0.5;
-  z-index: -1;
+	position: absolute;
+	top: 100px;
+	left: -100px;
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(
+		57.58% 57.58% at 48.79% 42.42%,
+		rgba(24, 180, 244, 0.5) 0%,
+		rgba(46, 55, 114, 0) 63.22%
+	);
+	transform: rotate(5deg);
+	opacity: 0.5;
+	z-index: -1;
 
-  &.ellipsis-purple {
-    top: 1350px;
-    left: -100px;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(172, 127, 244, 0.5) 0%,
-      rgba(21, 25, 52, 0) 100%
-    );
-    transform: rotate(-5deg);
-  }
+	&.ellipsis-purple {
+		top: 1350px;
+		left: -100px;
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(172, 127, 244, 0.5) 0%,
+			rgba(21, 25, 52, 0) 100%
+		);
+		transform: rotate(-5deg);
+	}
 }
 
 @media screen and (min-width: 768px) {

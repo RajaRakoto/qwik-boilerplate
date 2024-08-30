@@ -2,22 +2,22 @@
 
 a.button,
 button {
-  background: var(--qwik-light-blue);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  font-size: 0.8rem;
-  padding: 15px 20px;
-  text-align: center;
+	background: var(--qwik-light-blue);
+	border: none;
+	border-radius: 8px;
+	color: white;
+	cursor: pointer;
+	font-size: 0.8rem;
+	padding: 15px 20px;
+	text-align: center;
 
-  &.button-dark {
-    background: var(--qwik-dirty-black);
-  }
+	&.button-dark {
+		background: var(--qwik-dirty-black);
+	}
 
-  &.button-small {
-    padding: 15px 25px;
-  }
+	&.button-small {
+		padding: 15px 25px;
+	}
 }
 
 @media screen and (min-width: 768px) {
