@@ -63,6 +63,13 @@ export default defineConfig((): UserConfig => {
 				"Cache-Control": "public, max-age=600",
 			},
 		},
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: (source: string, id: string) => !id.includes("node_modules/@raja-rakoto/plum") ? source : ""
+        },
+      },
+    }
 	};
 });
 // *** utils ***
