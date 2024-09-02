@@ -64,6 +64,7 @@ export default defineConfig((): UserConfig => {
 			},
 		},
     css: {
+      devSourcemap: false,
       preprocessorOptions: {
         scss: {
           additionalData: (source: string, id: string) => !id.includes("node_modules/@raja-rakoto/plum") ? source : ""
