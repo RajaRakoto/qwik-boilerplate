@@ -2,10 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import { LuRocket } from "@qwikest/icons/lucide";
 
 /* images */
-import ImgThunder from "~/images/thunder.png?jsx";
-import ViteLogo from "~/images/vite.svg";
-import QwikLogo from "~/images/qwik.svg";
-import BunLogo from "~/images/bun.svg";
+import ImgThunder from "/public/images/thunder.png?jsx";
+import ViteLogo from "/images/vite.svg";
+import QwikLogo from "/images/qwik.svg";
+import BunLogo from "/images/bun.svg";
 
 /* styles */
 import styles from "./hero.module.scss";

@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 
 /* icons */
-import { QwikLogo } from "~/icons/qwik";
+import { QwikLogo } from "@/common/qwik-logo";
 
 /* styles */
 import styles from "./header.module.scss";
