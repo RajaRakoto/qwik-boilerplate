@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import { LuRocket } from "@qwikest/icons/lucide";
 
 /* images */
@@ -13,7 +13,7 @@ import styles from "./hero.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 
 	return (
 		<div class="container hero">

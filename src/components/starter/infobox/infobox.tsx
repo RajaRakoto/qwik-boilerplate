@@ -1,4 +1,4 @@
-import { Slot, component$, useStyles$ } from "@builder.io/qwik";
+import { Slot, component$, useStylesScoped$ } from "@builder.io/qwik";
 
 /* styles */
 import styles from "./infobox.scss?inline";
@@ -6,7 +6,7 @@ import styles from "./infobox.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles)
+  useStylesScoped$(styles)
 
 	return (
 		<div class="infobox">

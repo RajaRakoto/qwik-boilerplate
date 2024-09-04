@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
 /* styles */
 import styles from "./gauge.scss?inline";
@@ -6,7 +6,7 @@ import styles from "./gauge.scss?inline";
 // =======================================
 
 export default component$(({ value = 50 }: { value?: number }) => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 	const safeValue = value < 0 || value > 100 ? 50 : value;
 
 	return (

@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
 /* icons */
 import { QwikLogo } from "@/common/qwik-logo";
@@ -9,7 +9,7 @@ import styles from "./header.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 
 	return (
 		<header class="header">

@@ -1,6 +1,6 @@
 import {
 	component$,
-	useStyles$,
+	useStylesScoped$,
 	useOnWindow,
 	useSignal,
 	$,
@@ -15,7 +15,7 @@ import styles from "./next-steps.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 	const gettingStartedStep = useSignal(0);
 
 	useOnWindow(

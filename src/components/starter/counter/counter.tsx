@@ -1,4 +1,4 @@
-import { component$, useSignal, useStyles$, $ } from "@builder.io/qwik";
+import { component$, useSignal, useStylesScoped$, $ } from "@builder.io/qwik";
 
 /* components */
 import Gauge from "@/components/starter/gauge";
@@ -9,7 +9,7 @@ import styles from "./counter.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 	const count = useSignal(70);
 
 	const setCount = $((newValue: number) => {

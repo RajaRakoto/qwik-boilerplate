@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import {
 	type DocumentHead,
 	routeLoader$,
@@ -12,7 +12,7 @@ import {
 import type { I_ListItem } from "@/@types";
 
 /* styles */
-import styles from "./todolist.module.scss";
+import styles from "./todolist.scss?inline";
 
 // =======================================
 
@@ -35,6 +35,7 @@ export const useAddToListAction = routeAction$(
 );
 
 export default component$(() => {
+  useStylesScoped$(styles);
 	const list = useListLoader();
 	const action = useAddToListAction();
 
@@ -50,9 +51,9 @@ export default component$(() => {
 
 			<div class="container-center container">
 				{list.value.length === 0 ? (
-					<span class={styles.empty}>No items found</span>
+					<span class="empty">No items found</span>
 				) : (
-					<ul class={styles.list}>
+					<ul class="list">
 						{list.value.map((item, index) => (
 							<li key={`items-${index.toString()}`}>{item.text}</li>
 						))}
@@ -62,13 +63,13 @@ export default component$(() => {
 
 			<div class="container-center container">
 				<Form action={action} spaReset>
-					<input type="text" name="text" required class={styles.input} />{" "}
+					<input type="text" name="text" required class="input" />{" "}
 					<button type="submit" class="button-dark">
 						Add item
 					</button>
 				</Form>
 
-				<p class={styles.hint}>
+				<p class="hint">
 					PS: This little app works even when JavaScript is disabled.
 				</p>
 			</div>

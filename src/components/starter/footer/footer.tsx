@@ -1,4 +1,4 @@
-import { component$, useStyles$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
 /* routes */
 import { useServerTimeLoader } from "@/routes/layout";
@@ -9,7 +9,7 @@ import styles from "./footer.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStyles$(styles);
+  useStylesScoped$(styles);
 	const serverTime = useServerTimeLoader();
 
 	return (
