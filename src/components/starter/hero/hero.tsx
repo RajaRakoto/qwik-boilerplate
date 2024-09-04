@@ -22,8 +22,8 @@ export default component$(() => {
 						src={ViteLogo}
 						class={[styles.logo, styles.vite]}
 						alt="Vite.js logo"
-						width="200"
-						height="200"
+						width="128"
+						height="128"
 					/>
 				</a>
 				<a href="https://qwik.dev" target="_blank" rel="noopener noreferrer">
@@ -31,8 +31,8 @@ export default component$(() => {
 						src={QwikLogo}
 						class={[styles.logo, styles.qwik]}
 						alt="Qwik logo"
-						width="200"
-						height="200"
+						width="128"
+						height="128"
 					/>
 				</a>
 				<a href="https://bun.sh/" target="_blank" rel="noopener noreferrer">
@@ -40,8 +40,8 @@ export default component$(() => {
 						src={BunLogo}
 						class={[styles.logo, styles.bun]}
 						alt="Bun.js logo"
-						width="200"
-						height="200"
+						width="128"
+						height="128"
 					/>
 				</a>
 			</div>
