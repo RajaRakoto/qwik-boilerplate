@@ -1,14 +1,21 @@
-import { component$, $, useOnWindow, useSignal } from "@builder.io/qwik";
+import {
+	component$,
+	useStyles$,
+	useOnWindow,
+	useSignal,
+	$,
+} from "@builder.io/qwik";
 
 /* constants */
 import { GETTING_STARTED_STEPS } from "@/constants";
 
 /* styles */
-import styles from "./next-steps.module.scss";
+import styles from "./next-steps.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles);
 	const gettingStartedStep = useSignal(0);
 
 	useOnWindow(
@@ -27,16 +34,16 @@ export default component$(() => {
 				<br />
 				<span class="highlight">qwik intro</span>?
 			</h2>
-			<div class={styles.gettingstarted}>
+			<div class="gettingstarted">
 				<div
-					class={styles.intro}
+					class="intro"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
 					dangerouslySetInnerHTML={
 						GETTING_STARTED_STEPS[gettingStartedStep.value]?.message ?? ""
 					}
 				/>
 				<span
-					class={styles.hint}
+					class="hint"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
 					dangerouslySetInnerHTML={
 						GETTING_STARTED_STEPS[gettingStartedStep.value]?.hint ?? ""

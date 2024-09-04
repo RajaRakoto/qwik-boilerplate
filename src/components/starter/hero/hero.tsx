@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 import { LuRocket } from "@qwikest/icons/lucide";
 
 /* images */
@@ -8,19 +8,21 @@ import QwikLogo from "/images/qwik.svg";
 import BunLogo from "/images/bun.svg";
 
 /* styles */
-import styles from "./hero.module.scss";
+import styles from "./hero.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles);
+
 	return (
-		<div class={["container", styles.hero]}>
-			<ImgThunder class={styles["hero-image"]} alt="Image thunder" />
+		<div class="container hero">
+			<ImgThunder class="hero-image" alt="Image thunder" />
 			<div>
 				<a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
 					<img
 						src={ViteLogo}
-						class={[styles.logo, styles.vite]}
+						class="logo vite"
 						alt="Vite.js logo"
 						width="128"
 						height="128"
@@ -29,7 +31,7 @@ export default component$(() => {
 				<a href="https://qwik.dev" target="_blank" rel="noopener noreferrer">
 					<img
 						src={QwikLogo}
-						class={[styles.logo, styles.qwik]}
+						class="logo qwik"
 						alt="Qwik logo"
 						width="128"
 						height="128"
@@ -38,7 +40,7 @@ export default component$(() => {
 				<a href="https://bun.sh/" target="_blank" rel="noopener noreferrer">
 					<img
 						src={BunLogo}
-						class={[styles.logo, styles.bun]}
+						class="logo bun"
 						alt="Bun.js logo"
 						width="128"
 						height="128"
@@ -57,7 +59,7 @@ export default component$(() => {
 					style={{ color: "#eee", fontSize: "48px" }}
 				/>
 			</div>
-			<div class={styles["button-group"]}>
+			<div class="button-group">
 				<button
 					type="button"
 					onClick$={async () => {

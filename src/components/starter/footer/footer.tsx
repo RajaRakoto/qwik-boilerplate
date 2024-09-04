@@ -1,14 +1,15 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 
 /* routes */
 import { useServerTimeLoader } from "@/routes/layout";
 
 /* styles */
-import styles from "./footer.module.scss";
+import styles from "./footer.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles);
 	const serverTime = useServerTimeLoader();
 
 	return (
@@ -17,11 +18,11 @@ export default component$(() => {
 				<a
 					href="https://www.builder.io/"
 					target="_blank"
-					class={styles.anchor}
+					class="anchor"
 					rel="noreferrer"
 				>
 					<span>Made with ♡ by Builder.io</span>
-					<span class={styles.spacer}>|</span>
+					<span class="spacer">|</span>
 					<span>{serverTime.value.date}</span>
 				</a>
 			</div>

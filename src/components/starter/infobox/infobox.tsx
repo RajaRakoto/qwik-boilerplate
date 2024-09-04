@@ -1,13 +1,15 @@
-import { Slot, component$ } from "@builder.io/qwik";
+import { Slot, component$, useStyles$ } from "@builder.io/qwik";
 
 /* styles */
-import styles from "./infobox.module.scss";
+import styles from "./infobox.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles)
+
 	return (
-		<div class={styles.infobox}>
+		<div class="infobox">
 			<h3>
 				<Slot name="title" />
 			</h3>

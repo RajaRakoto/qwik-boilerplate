@@ -1,18 +1,20 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 
 /* icons */
 import { QwikLogo } from "@/common/qwik-logo";
 
 /* styles */
-import styles from "./header.module.scss";
+import styles from "./header.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles);
+
 	return (
-		<header class={styles.header}>
-			<div class={["container", styles.wrapper]}>
-				<div class={styles.logo}>
+		<header class="header">
+			<div class="container wrapper">
+				<div class="logo">
 					<a href="/" title="qwik">
 						<QwikLogo height={50} width={143} />
 					</a>
