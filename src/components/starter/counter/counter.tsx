@@ -9,7 +9,7 @@ import styles from "./counter.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 	const count = useSignal(70);
 
 	const setCount = $((newValue: number) => {

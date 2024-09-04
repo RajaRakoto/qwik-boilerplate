@@ -35,7 +35,7 @@ export const useAddToListAction = routeAction$(
 );
 
 export default component$(() => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 	const list = useListLoader();
 	const action = useAddToListAction();
 

@@ -6,7 +6,7 @@ import styles from "./gauge.scss?inline";
 // =======================================
 
 export default component$(({ value = 50 }: { value?: number }) => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 	const safeValue = value < 0 || value > 100 ? 50 : value;
 
 	return (

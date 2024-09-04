@@ -13,7 +13,7 @@ import styles from "./hero.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 
 	return (
 		<div class="container hero">

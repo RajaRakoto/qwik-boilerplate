@@ -6,7 +6,7 @@ import styles from "./infobox.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStylesScoped$(styles)
+	useStylesScoped$(styles);
 
 	return (
 		<div class="infobox">

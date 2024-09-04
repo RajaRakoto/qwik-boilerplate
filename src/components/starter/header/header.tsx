@@ -9,7 +9,7 @@ import styles from "./header.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 
 	return (
 		<header class="header">

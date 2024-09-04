@@ -9,7 +9,7 @@ import styles from "./footer.scss?inline";
 // =======================================
 
 export default component$(() => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 	const serverTime = useServerTimeLoader();
 
 	return (
