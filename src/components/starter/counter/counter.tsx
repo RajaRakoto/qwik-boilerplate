@@ -1,14 +1,15 @@
-import { component$, useSignal, $ } from "@builder.io/qwik";
+import { component$, useSignal, useStyles$, $ } from "@builder.io/qwik";
 
 /* components */
 import Gauge from "@/components/starter/gauge";
 
 /* styles */
-import styles from "./counter.module.scss";
+import styles from "./counter.scss?inline";
 
 // =======================================
 
 export default component$(() => {
+  useStyles$(styles);
 	const count = useSignal(70);
 
 	const setCount = $((newValue: number) => {
@@ -19,7 +20,7 @@ export default component$(() => {
 	});
 
 	return (
-		<div class={styles["counter-wrapper"]}>
+		<div class="counter-wrapper">
 			<button
 				type="button"
 				class="button-dark button-small"
