@@ -70,7 +70,8 @@ export default defineConfig((): UserConfig => {
           additionalData: (source: string, id: string) => !id.includes("node_modules/@raja-rakoto/plum") ? source : ""
         },
       },
-    }
+    },
+    publicDir: "./public",
 	};
 });
 // *** utils ***

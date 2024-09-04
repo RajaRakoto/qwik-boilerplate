@@ -8,8 +8,7 @@
 		"verbatimModuleSyntax": false,
 		"moduleResolution": "Bundler",
 		"moduleDetection": "force",
-		"rootDir": ".",
-		"outDir": "./dist",
+		"outDir": "./tmp",
 		"useDefineForClassFields": true,
 		"allowImportingTsExtensions": true,
 		"allowSyntheticDefaultImports": true,
@@ -37,7 +36,6 @@
 		"incremental": true,
 		"paths": {
 			"@/*": ["./src/*"],
-			"~/*": ["./public/*"]
 		}
 	},
 	"files": ["./.eslintrc.cjs"],
@@ -46,7 +44,7 @@
 		"e2e",
 		"tests",
 		"scripts",
-		"public/icons",
+		"public",
 		"./*.d.ts",
 		"./*.config.ts"
 	],
