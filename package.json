@@ -101,6 +101,6 @@
 		"undici": "*",
 		"ungit": "^1.5.27",
 		"vite": "5.3.5",
-		"vite-tsconfig-paths": "^4.2.1"
+		"vite-tsconfig-paths": "^5.0.1"
 	}
 }
