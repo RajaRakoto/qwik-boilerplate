@@ -37,7 +37,7 @@
 	"scripts": {
 		"start": "vite --open --mode ssr",
 		"preview": "qwik build preview && vite preview --open",
-		"clean": "rimraf build dist coverage playwright-report",
+		"clean": "rimraf server build dist coverage playwright-report",
 		"dev": "vite --mode ssr",
 		"dev:debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
 		"build": "qwik build",
