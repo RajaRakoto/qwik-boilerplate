@@ -121,11 +121,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-	title: "Welcome to Qwik",
+	title: "Qwik Boilerplate 🚀",
 	meta: [
 		{
 			name: "description",
-			content: "Qwik site description",
+			content:
+				"Minimalistic boilerplate to start Qwik development in TypeScript, optimized for blazing-fast performance with Bun & Vite 🚀",
 		},
 	],
 };
