@@ -9,6 +9,9 @@ import Footer from "@/components/starter/footer/footer";
 /* styles */
 import styles from "@/styles/index.scss?inline";
 
+/* fontsource */
+import "@fontsource-variable/overpass/wght.css";
+
 // =======================================
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
