@@ -45,7 +45,8 @@
 		"tests",
 		"scripts",
 		"./*.d.ts",
-		"./*.config.ts"
+		"./*.config.ts",
+		"./*.config.js"
 	],
 	"exclude": ["./node_modules"]
 }
