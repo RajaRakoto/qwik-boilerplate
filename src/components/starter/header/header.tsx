@@ -13,7 +13,7 @@ export default component$(() => {
 
 	return (
 		<header class="header">
-			<div class="container wrapper">
+			<div class="wrapper container">
 				<div class="logo">
 					<a href="/" title="qwik">
 						<QwikLogo height={50} width={143} />
