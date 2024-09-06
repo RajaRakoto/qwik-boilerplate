@@ -9,6 +9,7 @@
 	height: 450px;
 	justify-content: center;
 	gap: 40px;
+	margin-top: 3rem;
 
 	p {
 		color: white;
@@ -36,24 +37,31 @@
 		display: none;
 	}
 
-	.logo {
-		height: 6em;
-		padding: 1.5em;
-		will-change: filter;
-		transition: filter 300ms;
-		width: 128px !important;
-		height: 128px !important;
+	.logos {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 
-		&.vite:hover {
-			filter: drop-shadow(0 0 2em #eb79fff9);
-		}
+		.logo {
+			height: 6em;
+			padding: 1.5em;
+			will-change: filter;
+			transition: filter 300ms;
+			width: 128px !important;
+			height: 128px !important;
 
-		&.qwik:hover {
-			filter: drop-shadow(0 0 2em #37c3fff2);
-		}
+			&.vite:hover {
+				filter: drop-shadow(0 0 2em #eb79fff9);
+			}
 
-		&.bun:hover {
-			filter: drop-shadow(0 0 2em #ffe838e1);
+			&.qwik:hover {
+				filter: drop-shadow(0 0 2em #37c3fff2);
+			}
+
+			&.bun:hover {
+				filter: drop-shadow(0 0 2em #ffe838e1);
+			}
 		}
 	}
 }
@@ -66,5 +74,17 @@
 		p {
 			font-size: 1.3rem;
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		margin-top: 7rem;
+	}
+}
+
+@media screen and (max-width: 449px) {
+	.hero {
+		margin-top: 15rem;
 	}
 }

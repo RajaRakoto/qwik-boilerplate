@@ -5,6 +5,7 @@
 	padding: 30px 40px;
 
 	&.container-purple {
+		margin-top: 8rem;
 		background: var(--qwik-light-purple);
 	}
 
@@ -33,5 +34,29 @@
 		display: flex;
 		justify-content: center;
 		gap: 60px;
+	}
+}
+
+@media screen and (max-width: 621px) {
+	.container {
+		&.container-purple {
+			margin-top: 12rem;
+		}
+	}
+}
+
+@media screen and (max-width: 446px) {
+	.container {
+		&.container-purple {
+			margin-top: 18rem;
+		}
+	}
+}
+
+@media screen and (max-width: 265px) {
+	.container {
+		&.container-purple {
+			margin-top: 22rem;
+		}
 	}
 }

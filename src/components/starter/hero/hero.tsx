@@ -16,9 +16,9 @@ export default component$(() => {
 	useStylesScoped$(styles);
 
 	return (
-		<div class="container hero">
+		<div class="hero container">
 			<ImgThunder class="hero-image" alt="Image thunder" />
-			<div>
+			<div class="logos">
 				<a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
 					<img
 						src={ViteLogo}
