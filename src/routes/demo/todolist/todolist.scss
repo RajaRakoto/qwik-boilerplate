@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
 .list {
-  display: none;
+	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	color: white;
-	min-height: 250px;
 
 	li {
 		list-style: none;
@@ -15,7 +14,6 @@
 .empty {
 	color: white;
 	display: block;
-	min-height: 250px;
 }
 
 .input {
