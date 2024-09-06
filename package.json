@@ -44,7 +44,6 @@
 		"build.client": "vite build",
 		"build.preview": "vite build --ssr src/entry.preview.tsx",
 		"build.types": "tsc --incremental --noEmit",
-		"deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
 		"test:unit": "bun test ./tests/*.test.ts",
 		"test:unit:watch": "bun test --watch ./tests/*.test.ts",
 		"test:e2e": "rimraf playwright-report && playwright test ./e2e/*.spec.ts",
