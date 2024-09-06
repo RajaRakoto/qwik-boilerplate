@@ -1,11 +1,11 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import { LuRocket } from "@qwikest/icons/lucide";
 
-/* images */
-import ImgThunder from "/public/images/thunder.png?jsx";
-import ViteLogo from "/images/vite.svg";
-import QwikLogo from "/images/qwik.svg";
-import BunLogo from "/images/bun.svg";
+/* assets */
+import ImgThunder from "@/assets/images/thunder.png?jsx";
+import ViteLogo from "@/assets/images/vite.svg";
+import QwikLogo from "@/assets/images/qwik.svg";
+import BunLogo from "@/assets/images/bun.svg";
 
 /* styles */
 import styles from "./hero.scss?inline";
