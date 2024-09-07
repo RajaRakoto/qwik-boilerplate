@@ -61,8 +61,7 @@
 		"npm-version:minor": "npm version minor",
 		"npm-version:patch": "npm version patch",
 		"nvm": "nvm use",
-		"script:sass-charset": "cd scripts && bun sass-charset.js",
-		"qwik": "qwik"
+		"script:sass-charset": "cd scripts && bun sass-charset.js"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
@@ -72,7 +71,6 @@
 		"@fontsource-variable/overpass": "^5.0.20",
 		"@playwright/test": "^1.46.1",
 		"@qwikest/icons": "^0.0.13",
-		"@raja-rakoto/plum": "^1.1.1",
 		"@total-typescript/ts-reset": "^0.6.0",
 		"@types/bun": "^1.1.8",
 		"@types/eslint": "8.56.10",
