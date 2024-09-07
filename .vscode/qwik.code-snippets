@@ -28,7 +28,7 @@
 			"});"
 		]
 	},
-  "$ hook": {
+	"$ hook": {
 		"scope": "javascriptreact,typescriptreact",
 		"prefix": "qwik-$",
 		"description": "$() function hook",
