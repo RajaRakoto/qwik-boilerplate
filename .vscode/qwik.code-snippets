@@ -1,7 +1,7 @@
 {
 	"Qwik component (simple)": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "qcomponent$",
+		"prefix": "qwik-component$",
 		"description": "Simple Qwik component",
 		"body": [
 			"export const ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} = component$(() => {",
@@ -11,7 +11,7 @@
 	},
 	"Qwik component (props)": {
 		"scope": "typescriptreact",
-		"prefix": "qcomponent$ + props",
+		"prefix": "qwik-component$+props",
 		"description": "Qwik component w/ props",
 		"body": [
 			"export interface ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}}Props {",
@@ -28,33 +28,33 @@
 			"});"
 		]
 	},
+  "$ hook": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "qwik-$",
+		"description": "$() function hook",
+		"body": ["$(() => {", "  $0", "});", ""]
+	},
 	"Qwik signal": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "quseSignal",
+		"prefix": "qwik-useSignal",
 		"description": "useSignal() declaration",
 		"body": ["const ${1:foo} = useSignal($2);", "$0"]
 	},
 	"Qwik store": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "quseStore",
+		"prefix": "qwik-useStore",
 		"description": "useStore() declaration",
 		"body": ["const ${1:state} = useStore({", "  $2", "});", "$0"]
 	},
-	"$ hook": {
-		"scope": "javascriptreact,typescriptreact",
-		"prefix": "q$",
-		"description": "$() function hook",
-		"body": ["$(() => {", "  $0", "});", ""]
-	},
 	"useVisibleTask": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "quseVisibleTask",
+		"prefix": "qwik-useVisibleTask",
 		"description": "useVisibleTask$() function hook",
 		"body": ["useVisibleTask$(({ track }) => {", "  $0", "});", ""]
 	},
 	"useTask": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "quseTask$",
+		"prefix": "qwik-useTask$",
 		"description": "useTask$() function hook",
 		"body": [
 			"useTask$(({ track }) => {",
@@ -66,7 +66,7 @@
 	},
 	"useResource": {
 		"scope": "javascriptreact,typescriptreact",
-		"prefix": "quseResource$",
+		"prefix": "qwik-useResource$",
 		"description": "useResource$() declaration",
 		"body": [
 			"const $1 = useResource$(({ track, cleanup }) => {",
