@@ -8,7 +8,8 @@
 		"verbatimModuleSyntax": false,
 		"moduleResolution": "Bundler",
 		"moduleDetection": "force",
-		"outDir": "./tmp",
+		"rootDir": ".",
+		"outDir": "./dist",
 		"useDefineForClassFields": true,
 		"allowImportingTsExtensions": true,
 		"allowSyntheticDefaultImports": true,
@@ -35,7 +36,8 @@
 		"isolatedModules": true,
 		"incremental": true,
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"~/*": ["./public/*"]
 		}
 	},
 	"files": ["./.eslintrc.cjs"],
@@ -44,9 +46,11 @@
 		"e2e",
 		"tests",
 		"scripts",
+		"./*.cjs",
 		"./*.d.ts",
 		"./*.config.ts",
-		"./*.config.js"
+		"./*.config.js",
+		"./*.config.cjs"
 	],
 	"exclude": ["./node_modules"]
 }

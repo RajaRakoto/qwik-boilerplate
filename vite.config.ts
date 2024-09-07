@@ -3,24 +3,25 @@
  * When building, the adapter config is used which loads this file and extends it.
  */
 import { defineConfig, type UserConfig } from "vite";
-import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-import pkg from "./package.json";
+import { qwikVite } from "@builder.io/qwik/optimizer";
 import { partytownVite } from "@builder.io/partytown/utils";
 import { join } from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
+import pkg from "./package.json";
+
 type PkgDep = Record<string, string>;
-// biome-ignore lint/suspicious/noExplicitAny:
+
 const { dependencies = {}, devDependencies = {} } = pkg as any as {
 	dependencies: PkgDep;
 	devDependencies: PkgDep;
 	[key: string]: unknown;
 };
 errorOnDuplicatesPkgDeps(devDependencies, dependencies);
+
 /**
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
-
 export default defineConfig((): UserConfig => {
 	return {
 		plugins: [
@@ -74,7 +75,9 @@ export default defineConfig((): UserConfig => {
     publicDir: "./public",
 	};
 });
-// *** utils ***
+
+// ======================== utils =========================
+
 /**
  * Function to identify duplicate dependencies and throw an error
  * @param {Object} devDependencies - List of development dependencies
