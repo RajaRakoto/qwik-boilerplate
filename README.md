@@ -1,34 +1,36 @@
-# Qwik City App ⚡️
+# qwik-boilerplate 🚀
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/for-you.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://forthebadge.com) [![forthebadge](https://github.com/RajaRakoto/github-docs/blob/master/badge/build-by.svg?raw=true)](https://forthebadge.com)
+
+![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff)
+
+**Developer Ready: A comprehensive template that works seamlessly for most Qwik projects. Designed for use with the latest active Qwik release, this setup includes [QwikCity](https://qwik.dev/qwikcity/overview/), an additional toolkit that enhances Qwik by simplifying the creation of full websites with features like directory-based routing, layouts, and more.**
 
 - [Qwik Docs](https://qwik.dev/)
 - [Discord](https://qwik.dev/chat)
 - [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
 
----
+Instant Value - All basic tools included and configured:
 
-## Project Structure
-
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
-
-Inside your project, you'll see the following directory structure:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
-
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+- 🚀 Typescript >= 5.4.5
+- 🌐 React.js >= 18
+- 🧅 Use Bun as package manager
+- 🌈 ESM
+- 🧪 Biome for code formatting and linting
+- ✅ Jest or Bun test for fast unit testing and code coverage
+- 📚 Type definitions for Bun.js and Jest
+- ⚙️ EditorConfig for consistent coding style
+- 📦 NPM scripts for common operations
+- 📝 Simple example of Tsx code
+- 🐗 Run tasks with Grunt (example for backup)
+- 🖥️ Ungit for version control (git) with a GUI
+- ⚡ Use Vite for lightning fast HMR (hot reload)
+- ⚡ Optimized build by Vite
+- 🧪 E2E test with Playwright
+- 🐳 Containerization for easy deployment and scaling with Docker
+- 🧺 Pre-configured setup for Redux or Zustand as state manager, easily removable if not needed
+- 🌀 Tailwind CSS already set up with PostCSS for flexible usage
+- 🩷 Sass extends CSS with features like variables, nested rules, mixins, imports, inheritance, built-in functions, and more ...
 
 ## Add Integrations and deployment
 
