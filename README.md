@@ -12,11 +12,12 @@
 
 Instant Value - All basic tools included and configured:
 
-- 🚀 Typescript >= 5.4.5
-- 🌐 React.js >= 18
+- 🚀 Typescript >= 5.5.4
+- 🌐 Qwik >= 1.8.0
+- 🌐 Qwik City >= 1.8.0
 - 🧅 Use Bun as package manager
 - 🌈 ESM
-- 🧪 Biome for code formatting and linting
+- 🧪 Biome for JavaScript code formatting and linting
 - ✅ Jest or Bun test for fast unit testing and code coverage
 - 📚 Type definitions for Bun.js and Jest
 - ⚙️ EditorConfig for consistent coding style
@@ -28,40 +29,103 @@ Instant Value - All basic tools included and configured:
 - ⚡ Optimized build by Vite
 - 🧪 E2E test with Playwright
 - 🐳 Containerization for easy deployment and scaling with Docker
-- 🧺 Pre-configured setup for Redux or Zustand as state manager, easily removable if not needed
 - 🌀 Tailwind CSS already set up with PostCSS for flexible usage
 - 🩷 Sass extends CSS with features like variables, nested rules, mixins, imports, inheritance, built-in functions, and more ...
 
-## Add Integrations and deployment
+> You can customize your website faster with [PLUM](https://github.com/RajaRakoto/plum), a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size.
+
+---
+
+### 📌 Usage
+
+To use this template, use the following commands:
+
+```bash
+bun create github.com/RajaRakoto/qwik-boilerplate <project-name>
+cd <project-name>
+bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
+```
+
+> NOTE 1: I employ the `MIT license` for this starter kit, which includes my name and GitHub profile. Please remember to adjust or remove it if deemed unnecessary.
+
+> NOTE 2: In order to help you better understand the structure of this boilerplate, there is a `README.md` file in each subdirectory of src.
+
+> NOTE 3: For certain configurations in the `package.json` file, you need to modify them to tailor them to your project (e.g: name, description, author, keywords, main, repository, ...).
+
+---
+
+### 📌 Integrations and deployment
 
 Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
 
-```shell
-bun qwik add # or `bun qwik add`
+```bash
+bun qwik add
 ```
 
-## Development
+---
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+### 📌 NPM Scripts
 
-```shell
-npm start # or `bun start`
-```
+**Start**
+- 📜 `start` - Launches the Vite.js server in SSR mode and automatically opens the app in the browser.
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+**Preview**
+- 📜 `preview` - Builds a preview with Qwik and runs a Vite.js preview, automatically opening the app.
 
-## Preview
+**Clean**
+- 📜 `clean` - Removes the `server`, `build`, `dist`, `coverage`, and `playwright-report` folders.
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+**Development**
+- 📜 `dev` - Starts Vite.js in SSR mode.
 
-```shell
-bun preview # or `bun preview`
-```
+**Development with Debugging**
+- 📜 `dev:debug` - Starts Vite.js in SSR mode with Node.js debugger enabled.
 
-## Production
+**Build**
+- 📜 `build` - Builds the application with Qwik.
+- 📜 `build.client` - Builds the client with Vite.js.
+- 📜 `build.preview` - Builds the project in SSR mode from `src/entry.preview.tsx`.
+- 📜 `build.types` - Manages TypeScript type compilation without emitting files.
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+**Testing**
+- 📜 `test:unit` - Runs unit tests with Bun.js.
+- 📜 `test:unit:watch` - Interactive mode for automatically re-running unit tests with Bun.js.
+- 📜 `test:e2e` - Deletes Playwright reports and runs end-to-end (e2e) tests with Playwright.
 
-```shell
-bun build # or `bun build`
-```
+**Linting and Formatting**
+- 📜 `biome:start` - Starts the Biome daemon server.
+- 📜 `biome:stop` - Stops the Biome daemon server.
+- 📜 `biome:fix` - Applies automatic fixes (linter & formatter) using Biome.
+- 📜 `biome:unsafe` - Applies riskier fixes using Biome.
+- 📜 `eslint` - Lints the project with ESLint and reports unhandled errors.
+- 📜 `prettier` - Formats code according to the `.prettierrc` rules.
+
+**Backup and Dependency Management**
+- 📜 `backups` - Backs up files with Grunt.
+- 📜 `pkg-check` - Checks for unused dependencies with depcheck.
+- 📜 `pkg-upgrade` - Updates outdated dependencies interactively using npm-check-updates, configured for Bun.js.
+
+**Versioning**
+- 📜 `versioning` - Starts the ungit server.
+- 📜 `npm-version:major` - Increments the project's major version.
+- 📜 `npm-version:minor` - Increments the project's minor version.
+- 📜 `npm-version:patch` - Increments the project's patch version.
+
+**NVM**
+- 📜 `nvm` - Manages multiple versions of Node.js.
+
+**Scripts**
+- 📜 `script:sass-charset` - Adds the `@charset "UTF-8"` declaration at the beginning of SCSS files using a Bun script.
+
+---
+
+### 📌 Similar
+
+You can also check out my other starter projects:
+
+- 🚀 [bun-boilerplate](https://github.com/RajaRakoto/bun-boilerplate)
+- 🚀 [node-boilerplate](https://github.com/RajaRakoto/node-boilerplate)
+- 🚀 [react-boilerplate](https://github.com/RajaRakoto/react-boilerplate)
+- 🚀 [next-boilerplate](https://github.com/RajaRakoto/next-boilerplate)
+- 🚀 [vscode-boilerplate](https://github.com/RajaRakoto/vscode-boilerplate)
+- 🚀 [cli-boilerplate](https://github.com/RajaRakoto/cli-boilerplate)
