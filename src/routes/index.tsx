@@ -126,7 +126,7 @@ export const head: DocumentHead = {
 		{
 			name: "description",
 			content:
-				"Minimalistic boilerplate to start Qwik development in TypeScript, optimized for blazing-fast performance with Bun & Vite 🚀",
+				"Minimalistic fullstack boilerplate for developing Qwik + QwikCity applications in TypeScript, optimized for blazing-fast performance using Bun & Vite 🚀",
 		},
 	],
 };
