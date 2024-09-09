@@ -41,16 +41,6 @@
 		}
 	},
 	"files": ["./.eslintrc.cjs"],
-	"include": [
-		"src",
-		"e2e",
-		"tests",
-		"scripts",
-		"./*.cjs",
-		"./*.d.ts",
-		"./*.config.ts",
-		"./*.config.js",
-		"./*.config.cjs"
-	],
+	"include": ["src", "e2e", "tests", "scripts", "./*.cjs", "./*.js", "./*.ts"],
 	"exclude": ["./node_modules"]
 }
