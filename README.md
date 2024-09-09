@@ -17,17 +17,23 @@ Instant Value - All basic tools included and configured:
 - 🌐 Qwik City >= 1.8.0
 - 🧅 Use Bun as package manager
 - 🌈 ESM
+- 🧹 ESlint with some initial rules recommendation
 - 🧪 Biome for JavaScript code formatting and linting
 - ✅ Jest or Bun test for fast unit testing and code coverage
 - 📚 Type definitions for Bun.js and Jest
+- 🎨 Prettier to enforce consistent code style
 - ⚙️ EditorConfig for consistent coding style
 - 📦 NPM scripts for common operations
 - 📝 Simple example of Tsx code
 - 🐗 Run tasks with Grunt (example for backup)
 - 🖥️ Ungit for version control (git) with a GUI
-- ⚡ Use Vite for lightning fast HMR (hot reload)
+- ⚡ Use Vite for lightning fast HMR (hot reload) in SSR mode
 - ⚡ Optimized build by Vite
 - 🧪 E2E test with Playwright
+- 🕚 A modern and efficient interface for managing HTTP requests with Undici
+- 🥏 Easily add over 180000+ icons to your Qwik app with qwikest/icons
+- 🧵 Defer third party scripts like Google Analytics, Facebook Pixel, etc off the main thread by using a web worker with partytown
+- 🖋️ Self-host fonts effortlessly using Fontsource, which includes Google Fonts and other open-source options.
 - 🐳 Containerization for easy deployment and scaling with Docker
 - 🌀 Tailwind CSS already set up with PostCSS for flexible usage
 - 🩷 Sass extends CSS with features like variables, nested rules, mixins, imports, inheritance, built-in functions, and more ...
@@ -46,11 +52,9 @@ cd <project-name>
 bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
 ```
 
-> NOTE 1: I employ the `MIT license` for this starter kit, which includes my name and GitHub profile. Please remember to adjust or remove it if deemed unnecessary.
-
-> NOTE 2: In order to help you better understand the structure of this boilerplate, there is a `README.md` file in each subdirectory of src.
-
-> NOTE 3: For certain configurations in the `package.json` file, you need to modify them to tailor them to your project (e.g: name, description, author, keywords, main, repository, ...).
+> 1. This starter kit uses the MIT license with my name and GitHub profile—update or remove if needed.
+> 2. Each subdirectory in `src` has a `README.md` to explain its structure.
+> 3. Adjust the `package.json` (name, description, author, etc.) to fit your project.
 
 ---
 
