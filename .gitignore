@@ -96,5 +96,5 @@ tsconfig.tsbuildinfo
 
 # own
 playwright-report
-tmp
 backups
+tmp
