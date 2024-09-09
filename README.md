@@ -54,68 +54,76 @@ bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
 
 ---
 
-### 📌 Integrations and deployment
+### 📌 Integrations and Deployment
 
 Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
-
-```bash
-bun qwik add
-```
 
 ---
 
 ### 📌 NPM Scripts
 
 **Start**
+
 - 📜 `start` - Launches the Vite.js server in SSR mode and automatically opens the app in the browser.
 
 **Preview**
-- 📜 `preview` - Builds a preview with Qwik and runs a Vite.js preview, automatically opening the app.
+
+- 📜 `preview` - Run your app with preview mode.
 
 **Clean**
-- 📜 `clean` - Removes the `server`, `build`, `dist`, `coverage`, and `playwright-report` folders.
+
+- 📜 `clean` - Removes server, build, dist, coverage, playwright-report ...
 
 **Development**
-- 📜 `dev` - Starts Vite.js in SSR mode.
 
-**Development with Debugging**
+- 📜 `dev` - Launch Vite.js development server using hot module remplacement (HMR) + SSR mode.
 - 📜 `dev:debug` - Starts Vite.js in SSR mode with Node.js debugger enabled.
 
 **Build**
+
 - 📜 `build` - Builds the application with Qwik.
 - 📜 `build.client` - Builds the client with Vite.js.
 - 📜 `build.preview` - Builds the project in SSR mode from `src/entry.preview.tsx`.
 - 📜 `build.types` - Manages TypeScript type compilation without emitting files.
 
 **Testing**
-- 📜 `test:unit` - Runs unit tests with Bun.js.
-- 📜 `test:unit:watch` - Interactive mode for automatically re-running unit tests with Bun.js.
-- 📜 `test:e2e` - Deletes Playwright reports and runs end-to-end (e2e) tests with Playwright.
+
+- 📜 `test:unit` - Run unit testing with Bun.js.
+- 📜 `test:unit:watch` - Interactive watch mode to automatically re-run unit testing with Bun.js.
+- 📜 `test:e2e` - Run end to end (e2e) testing with Playwright.
 
 **Linting and Formatting**
-- 📜 `biome:start` - Starts the Biome daemon server.
+
+- 📜 `biome:start` - Starts the Biome daemon server. You can specify a custom configuration file path using the `--config-path` option.
 - 📜 `biome:stop` - Stops the Biome daemon server.
-- 📜 `biome:fix` - Applies automatic fixes (linter & formatter) using Biome.
-- 📜 `biome:unsafe` - Applies riskier fixes using Biome.
+- 📜 `biome:fix` - Runs a source code check and applies automatic fixes (linter & formatter) according to the defined rules.
+- 📜 `biome:unsafe` - Works like `biome:fix`, but may apply more invasive or risky changes.
 - 📜 `eslint` - Lints the project with ESLint and reports unhandled errors.
 - 📜 `prettier` - Formats code according to the `.prettierrc` rules.
 
 **Backup and Dependency Management**
-- 📜 `backups` - Backs up files with Grunt.
-- 📜 `pkg-check` - Checks for unused dependencies with depcheck.
-- 📜 `pkg-upgrade` - Updates outdated dependencies interactively using npm-check-updates, configured for Bun.js.
+
+- 📜 `backup` - Backup files with Grunt.
+- 📜 `pkg-check` - Check useless dependencies with depcheck.
+- 📜 `pkg-upgrade` - Upgrade outdated dependencies (interactive mode) with npm-check-updates.
 
 **Versioning**
-- 📜 `versioning` - Starts the ungit server.
-- 📜 `npm-version:major` - Increments the project's major version.
-- 📜 `npm-version:minor` - Increments the project's minor version.
-- 📜 `npm-version:patch` - Increments the project's patch version.
+
+- 📜 `versioning` - Start ungit server.
+
+**NPM commands**
+
+- 📜 `npm-version:major` - Increments the major version number of your project using npm.
+- 📜 `npm-version:minor` - Increments the minor version number of your project using npm.
+- 📜 `npm-version:patch` - Increments the version patch number of your project using npm.
 
 **NVM**
-- 📜 `nvm` - Manages multiple versions of Node.js.
+
+- 📜 `nvm` - Manage multiple node.js versions. Easily switch between node versions per project to ensure compatibility.
 
 **Scripts**
-- 📜 `script:sass-charset` - Adds the `@charset "UTF-8"` declaration at the beginning of SCSS files using a Bun script.
+
+- 📜 `script:sass-charset` - Adds the @charset "UTF-8" declaration at the beginning of all SCSS files in the project.
 
 ---
 
