@@ -6,7 +6,7 @@ import { defineConfig, type UserConfig } from "vite";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { partytownVite } from "@builder.io/partytown/utils";
-import { join } from "path";
+import { join } from "node:path";
 import tsconfigPaths from "vite-tsconfig-paths";
 import pkg from "./package.json";
 
@@ -64,15 +64,16 @@ export default defineConfig((): UserConfig => {
 				"Cache-Control": "public, max-age=600",
 			},
 		},
-    css: {
-      devSourcemap: false,
-      preprocessorOptions: {
-        scss: {
-          additionalData: (source: string, id: string) => !id.includes("node_modules/@raja-rakoto/plum") ? source : ""
-        },
-      },
-    },
-    publicDir: "./public",
+		css: {
+			devSourcemap: false,
+			preprocessorOptions: {
+				scss: {
+					additionalData: (source: string, id: string) =>
+						!id.includes("node_modules/@raja-rakoto/plum") ? source : "",
+				},
+			},
+		},
+		publicDir: "./public",
 	};
 });
 
