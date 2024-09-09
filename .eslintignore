@@ -26,9 +26,6 @@ node_modules
 bower_components
 jspm_packages
 
-# config
-vite.config.ts
-
 # cache
 .rollup.cache
 .cache

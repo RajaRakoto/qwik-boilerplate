@@ -26,9 +26,6 @@ node_modules
 bower_components
 jspm_packages
 
-# config
-vite.config.ts
-
 # cache
 .rollup.cache
 .cache
@@ -40,6 +37,6 @@ vite.config.ts
 .netlify
 
 # own
+package.json
 backups
 tmp
-package.json
