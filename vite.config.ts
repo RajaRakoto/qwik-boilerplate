@@ -2,6 +2,7 @@
  * This is the base config for vite.
  * When building, the adapter config is used which loads this file and extends it.
  */
+
 import { defineConfig, type UserConfig } from "vite";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
@@ -53,6 +54,8 @@ export default defineConfig((): UserConfig => {
 		//       }
 		//     : undefined,
 		server: {
+      host: false,
+      strictPort: true,
 			headers: {
 				// Don't cache the server response in dev mode
 				"Cache-Control": "public, max-age=0",
