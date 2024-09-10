@@ -73,7 +73,7 @@
 		"@playwright/test": "^1.47.0",
 		"@qwikest/icons": "^0.0.13",
 		"@total-typescript/ts-reset": "^0.6.1",
-		"@types/bun": "^1.1.8",
+		"@types/bun": "latest",
 		"@types/eslint": "8.56.10",
 		"@types/jest": "^29.5.12",
 		"@types/node": "22.5.4",
