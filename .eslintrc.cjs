@@ -2,7 +2,7 @@ module.exports = {
 	root: true,
 	env: {
 		browser: true,
-		es2021: true,
+		es6: true,
 		node: true,
 	},
 	extends: [
@@ -16,7 +16,7 @@ module.exports = {
 	parserOptions: {
 		tsconfigRootDir: __dirname,
 		project: ["./tsconfig.json"],
-		ecmaVersion: 2021,
+		ecmaVersion: 'latest',
 		sourceType: "module",
 		ecmaFeatures: {
 			jsx: true,
