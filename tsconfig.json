@@ -47,7 +47,6 @@
 		"tests",
 		"scripts",
 		"./*.cjs",
-		"./*.mjs",
 		"./*.mts",
 		"./*.js",
 		"./*.ts"
