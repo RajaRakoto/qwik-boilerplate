@@ -54,8 +54,8 @@ export default defineConfig((): UserConfig => {
 		//       }
 		//     : undefined,
 		server: {
-      host: false,
-      strictPort: true,
+			host: false,
+			strictPort: true,
 			headers: {
 				// Don't cache the server response in dev mode
 				"Cache-Control": "public, max-age=0",
