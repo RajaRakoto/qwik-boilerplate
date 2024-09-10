@@ -25,6 +25,7 @@ tsdoc-metadata.json
 node_modules
 bower_components
 jspm_packages
+*.local
 
 # cache
 .rollup.cache
