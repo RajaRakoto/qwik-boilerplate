@@ -32,4 +32,3 @@ The new configuration includes:
 - Fixed TypeScript rule references in CommonJS files
 - Separated configurations by file type for better performance
 - Added proper global variable definitions for different environments
-
