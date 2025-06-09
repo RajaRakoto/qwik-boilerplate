@@ -3,7 +3,6 @@
  * @requires: grunt | load-grunt-tasks | grunt-contrib-compress
  */
 module.exports = (grunt) => {
-	// eslint-disable-next-line @typescript-eslint/no-var-requires
 	require("load-grunt-tasks")(grunt);
 
 	// all files destination (example)

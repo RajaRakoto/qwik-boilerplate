@@ -40,7 +40,7 @@
 			"~/*": ["./public/*"]
 		}
 	},
-	"files": ["./.eslintrc.cjs"],
+	"files": ["./eslint.config.js"],
 	"include": [
 		"src",
 		"e2e",
