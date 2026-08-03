@@ -8,136 +8,115 @@
 
 ![Git](https://img.shields.io/badge/-Git-777?style=flat&logo=git&logoColor=F05032&labelColor=ffffff) ![Gitub](https://img.shields.io/badge/-Gitub-777?style=flat&logo=github&logoColor=777&labelColor=ffffff)
 
-**Developer Ready: A comprehensive template that works seamlessly for most Qwik projects. Designed for use with the latest active Qwik release, this setup includes [QwikCity](https://qwik.dev/qwikcity/overview/), an additional toolkit that enhances Qwik by simplifying the creation of full websites with features like directory-based routing, layouts, and more.**
+**Developer-ready, minimalistic fullstack boilerplate for building blazing-fast applications with [Qwik](https://qwik.dev) + [QwikCity](https://qwik.dev/qwikcity/overview/), powered by [Bun](https://bun.sh) & [Vite](https://vitejs.dev).**
 
 - [Qwik Docs](https://qwik.dev/)
 - [Discord](https://qwik.dev/chat)
 - [Qwik GitHub](https://github.com/QwikDev/qwik)
 
-Instant Value - All basic tools included and configured:
+## ✨ Features
 
-- 🚀 Typescript >= 5.5.4
-- 🌐 Qwik >= 1.8.0
-- 🌐 Qwik City >= 1.8.0
-- 🧅 Use Bun as package manager
-- 🌈 ESM
-- 🧹 ESlint with some initial rules recommendation
-- 🧪 Biome for JavaScript code formatting and linting
-- ✅ Jest or Bun test for fast unit testing and code coverage
-- 📚 Type definitions for Bun.js and Jest
-- 🎨 Prettier to enforce consistent code style
-- ⚙️ EditorConfig for consistent coding style
-- 📦 NPM scripts for common operations
-- 📝 Simple example of Tsx code
-- 🐗 Run tasks with Grunt (example for backup)
-- 🖥️ Ungit for version control (git) with a GUI
-- ⚡ Use Vite for lightning fast HMR (hot reload) in SSR mode
-- ⚡ Optimized build by Vite
-- 🧪 E2E test with Playwright
-- 🕚 A modern and efficient interface for managing HTTP requests with Undici
-- 🥏 Easily add over 180000+ icons to your Qwik app with qwikest/icons
-- 🧵 Defer third party scripts like Google Analytics, Facebook Pixel, etc off the main thread by using a web worker with partytown
-- 🖋️ Self-host fonts effortlessly using Fontsource, which includes Google Fonts and other open-source options.
-- 🐳 Containerization for easy deployment and scaling with Docker
-- 🌀 Tailwind CSS already set up with PostCSS for flexible usage
-- 🩷 Sass extends CSS with features like variables, nested rules, mixins, imports, inheritance, built-in functions, and more ...
+| Area | Stack |
+|------|-------|
+| Framework | Qwik + QwikCity (resumability, zero hydration, fine-grained lazy loading) |
+| Runtime | Bun (package manager + test runner), Node ≥ 20.19 or ≥ 22.12 |
+| Build | Vite 7 SSR with HMR |
+| Language | TypeScript (strict mode), path aliases `@/*` → `src/`, `~/*` → `public/` |
+| Styling | Tailwind CSS 4, Sass (variables, mixins), self-hosted Fontsource fonts |
+| Quality | Biome, ESLint (eslint-plugin-qwik), Prettier, EditorConfig |
+| Testing | Playwright (e2e) + Bun test (unit) |
+| Icons | qwikest/icons (180k+ icons) |
+| Perf | Partytown (third-party scripts off main thread), service worker prefetching |
+| Ops | Docker, Grunt backups, depcheck, npm-check-updates, ungit |
 
-> You can customize your website faster with [PLUM](https://github.com/RajaRakoto/plum), a mixins toolset powered by SASS. Quickly produce consistent, scalable CSS output, regardless of project size. For the best experience, it is recommended to use SASS version `1.77.6` to ensure smooth integration with PLUM.
+> 💡 Optionally pair with [PLUM](https://github.com/RajaRakoto/plum), a Sass mixins toolset. For smooth integration it is recommended to keep Sass `1.77.6`.
 
----
-
-### 📌 Usage
-
-To use this template, use the following commands:
+## 🚀 Quick Start
 
 ```bash
 bun create github.com/RajaRakoto/qwik-boilerplate <project-name>
 cd <project-name>
-bun run pkg-upgrade # to upgrade outdated dependencies in interactive mode
+bun install
+bun run dev
 ```
 
-> 1. This starter kit uses the MIT license with my name and GitHub profile—update or remove if needed.
-> 2. Each subdirectory in `src` has a `README.md` to explain its structure.
-> 3. Adjust the `package.json` (name, description, author, etc.) to fit your project.
+> 1. MIT license uses your name/GitHub — update or remove if needed.
+> 2. Each subdirectory in `src` has its own `README.md` explaining its purpose.
+> 3. Adjust `package.json` (name, description, author, etc.) to fit your project.
 
----
+## 📁 Project Structure
 
-### 📌 Integrations and Deployment
+```
+src/
+├── @types/          Global type declarations
+├── api/             API clients & server communication
+├── assets/          Static assets (images, logos)
+├── auth/            Authentication logic
+├── common/          Shared components (e.g. QwikLogo)
+├── components/      UI components
+│   └── starter/     Demo components (hero, counter, gauge, header, footer, …)
+├── constants/       Shared constants (getting-started steps)
+├── data/            Data sources / mocks
+├── extras/          Optional add-ons
+├── pages/           Page-level components
+├── routes/          QwikCity file-based routing
+│   ├── layout.tsx         Root layout (header/footer, cache headers, server time)
+│   ├── service-worker.ts  Prefetching service worker
+│   └── demo/              Demo apps (flower, todolist)
+├── styles/          Global styles (Sass + Tailwind)
+├── types/           Ambient type declarations (Partytown)
+├── utils/           Utility functions
+├── entry.dev.tsx    Dev-only entry point
+├── entry.preview.tsx Vite preview entry point
+├── entry.ssr.tsx    SSR entry point
+└── root.tsx         QwikCityProvider root
+```
 
-Use the `bun qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
+`api/`, `auth/`, `data/`, `extras/`, `pages/` are placeholders that keep the structure ready for common concerns — drop your code in, each folder documents itself via its `README.md`.
 
----
+## 🌐 Routes
 
-### 📌 NPM Scripts
+- `/` — Landing page: hero, counter, getting-started walkthrough
+- `/demo/flower` — Reactive flower generator (`useTask$`, `useStore`)
+- `/demo/todolist` — Todo list demo (`routeLoader$` + `routeAction$` + Zod, works without JS)
 
-**Start**
+## 📜 Scripts
 
-- 📜 `start` - Launches the Vite.js server in SSR mode and automatically opens the app in the browser.
+All commands run with `bun run <script>`.
 
-**Preview**
+| Script | Description |
+|--------|-------------|
+| `dev` | Start dev server (SSR + HMR) |
+| `dev:debug` | Start dev server with Node.js debugger |
+| `start` | Start dev server and open the browser |
+| `preview` | Build production and serve a preview |
+| `build` | Production build (client + SSR) |
+| `build.client` | Build client bundle only |
+| `build.preview` | Build SSR preview bundle (`entry.preview.tsx`) |
+| `build.types` | TypeScript type-check (no emit) |
+| `clean` | Remove `server`, `build`, `dist`, `coverage`, `playwright-report` |
+| `test:unit` / `test:unit:watch` | Unit tests (Bun), watch mode |
+| `test:e2e` | End-to-end tests (Playwright) |
+| `biome:fix` | Lint & format with Biome |
+| `biome:unsafe` | Biome with unsafe fixes |
+| `biome:start` / `biome:stop` | Manage the Biome daemon |
+| `eslint` | Lint with ESLint (warnings fail the run) |
+| `prettier` | Format with Prettier |
+| `pkg-check` | Find unused dependencies (depcheck) |
+| `pkg-upgrade` | Interactive dependency upgrade (npm-check-updates) |
+| `backups` | Incremental backups with Grunt |
+| `versioning` | Start ungit (Git GUI) |
+| `npm-version:major/minor/patch` | Bump version via npm |
+| `nvm` | Switch to the project's Node version |
+| `script:sass-charset` | Prepend `@charset "UTF-8"` to all SCSS files |
 
-- 📜 `preview` - Run your app with preview mode.
+## 🔌 Integrations & Deployment
 
-**Clean**
+Use `bun qwik add` to add an adapter (Cloudflare, Netlify, Express…) or the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/). A base `Dockerfile` is included for containerized deployment.
 
-- 📜 `clean` - Removes server, build, dist, coverage, playwright-report ...
+## 🔗 Similar
 
-**Development**
-
-- 📜 `dev` - Launch Vite.js development server using hot module remplacement (HMR) + SSR mode.
-- 📜 `dev:debug` - Starts Vite.js in SSR mode with Node.js debugger enabled.
-
-**Build**
-
-- 📜 `build` - Builds the application with Qwik.
-- 📜 `build.client` - Builds the client with Vite.js.
-- 📜 `build.preview` - Builds the project in SSR mode from `src/entry.preview.tsx`.
-- 📜 `build.types` - Manages TypeScript type compilation without emitting files.
-
-**Testing**
-
-- 📜 `test:unit` - Run unit testing with Bun.js.
-- 📜 `test:unit:watch` - Interactive watch mode to automatically re-run unit testing with Bun.js.
-- 📜 `test:e2e` - Run end to end (e2e) testing with Playwright.
-
-**Linting and Formatting**
-
-- 📜 `biome:start` - Starts the Biome daemon server. You can specify a custom configuration file path using the `--config-path` option.
-- 📜 `biome:stop` - Stops the Biome daemon server.
-- 📜 `biome:fix` - Runs a source code check and applies automatic fixes (linter & formatter) according to the defined rules.
-- 📜 `biome:unsafe` - Works like `biome:fix`, but may apply more invasive or risky changes.
-- 📜 `eslint` - Lints the project with ESLint and reports unhandled errors.
-- 📜 `prettier` - Formats code according to the `.prettierrc` rules.
-
-**Backup and Dependency Management**
-
-- 📜 `backup` - Backup files with Grunt.
-- 📜 `pkg-check` - Check useless dependencies with depcheck.
-- 📜 `pkg-upgrade` - Upgrade outdated dependencies (interactive mode) with npm-check-updates.
-
-**Versioning**
-
-- 📜 `versioning` - Start ungit server.
-
-**NPM commands**
-
-- 📜 `npm-version:major` - Increments the major version number of your project using npm.
-- 📜 `npm-version:minor` - Increments the minor version number of your project using npm.
-- 📜 `npm-version:patch` - Increments the version patch number of your project using npm.
-
-**NVM**
-
-- 📜 `nvm` - Manage multiple node.js versions. Easily switch between node versions per project to ensure compatibility.
-
-**Scripts**
-
-- 📜 `script:sass-charset` - Adds the @charset "UTF-8" declaration at the beginning of all SCSS files in the project.
-
----
-
-### 📌 Similar
-
-You can also check out my other starter projects:
+Check out my other starter projects:
 
 - 🚀 [bun-boilerplate](https://github.com/RajaRakoto/bun-boilerplate)
 - 🚀 [node-boilerplate](https://github.com/RajaRakoto/node-boilerplate)
