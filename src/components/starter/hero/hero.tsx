@@ -88,7 +88,6 @@ export default component$(() => {
 									resolve((globalThis as any).confetti as any);
 								script.onerror = reject;
 								document.head.appendChild(script);
-								script.remove();
 							});
 						}
 
