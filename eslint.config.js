@@ -2,7 +2,6 @@ import eslint from "@eslint/js";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import qwikPlugin from "eslint-plugin-qwik";
-import jestPlugin from "eslint-plugin-jest";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 
@@ -70,12 +69,10 @@ export default [
 		plugins: {
 			"@typescript-eslint": tseslint,
 			qwik: qwikPlugin,
-			jest: jestPlugin,
 		},
 		rules: {
 			...tseslint.configs.recommended.rules,
 			...qwikPlugin.configs.recommended.rules,
-			...jestPlugin.configs.recommended.rules,
 
 			// Custom rules from your original config
 			"@typescript-eslint/no-explicit-any": "off",
@@ -110,11 +107,7 @@ export default [
 				...globals.es2021,
 			},
 		},
-		plugins: {
-			jest: jestPlugin,
-		},
 		rules: {
-			...jestPlugin.configs.recommended.rules,
 			"prefer-spread": "off",
 			"no-case-declarations": "off",
 			"no-console": "off",
