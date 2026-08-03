@@ -1,0 +1,7 @@
+dist/**
+server/**
+public/**
+playwright-report/**
+test-results/**
+coverage/**
+*.generated.ts
