@@ -91,7 +91,7 @@ function errorOnDuplicatesPkgDeps(
 	devDependencies: PkgDep,
 	dependencies: PkgDep,
 ) {
-	let msg = "";
+	let msg: string;
 	// Create an array 'duplicateDeps' by filtering devDependencies.
 	// If a dependency also exists in dependencies, it is considered a duplicate.
 	const duplicateDeps = Object.keys(devDependencies).filter(
