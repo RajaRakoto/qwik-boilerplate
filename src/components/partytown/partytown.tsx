@@ -15,6 +15,5 @@ export interface PartytownProps extends PartytownConfig {}
  * You can pass setting with props
  */
 export const QwikPartytown = (props: PartytownProps): any => {
-	// biome-ignore lint:
 	return <script dangerouslySetInnerHTML={partytownSnippet(props)} />;
 };

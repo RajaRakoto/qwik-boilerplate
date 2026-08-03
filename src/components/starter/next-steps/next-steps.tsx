@@ -37,14 +37,12 @@ export default component$(() => {
 			<div class="gettingstarted">
 				<div
 					class="intro"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
 					dangerouslySetInnerHTML={
 						GETTING_STARTED_STEPS[gettingStartedStep.value]?.message ?? ""
 					}
 				/>
 				<span
 					class="hint"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted source
 					dangerouslySetInnerHTML={
 						GETTING_STARTED_STEPS[gettingStartedStep.value]?.hint ?? ""
 					}
